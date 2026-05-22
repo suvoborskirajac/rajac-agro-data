@@ -1,0 +1,160 @@
+{
+  "ok": true,
+  "label": "PIO Rajac — пољопривредне парцеле",
+  "latest": "2026-01",
+  "periods": [
+    {
+      "id": "2026-04",
+      "label": "04/2026",
+      "kind": "monthly",
+      "image_count": 13,
+      "scale_m": 10.0
+    },
+    {
+      "id": "2026-03",
+      "label": "03/2026",
+      "kind": "monthly",
+      "image_count": 12,
+      "scale_m": 10.0
+    },
+    {
+      "id": "2026-02",
+      "label": "02/2026",
+      "kind": "monthly",
+      "image_count": 4,
+      "scale_m": 10.0
+    },
+    {
+      "id": "2026-01",
+      "label": "01/2026",
+      "kind": "monthly",
+      "image_count": 3,
+      "scale_m": 10.0
+    }
+  ],
+  "indices": [
+    {
+      "id": "ndvi",
+      "label": "NDVI",
+      "name_sr": "Виталност културе",
+      "desc": "Виталност и густина биомaсе. Кoрисно код cвих усева.",
+      "min": -0.2,
+      "max": 0.95,
+      "palette": "vegetation"
+    },
+    {
+      "id": "evi",
+      "label": "EVI",
+      "name_sr": "Побољшани вeгeтациoни индeкс",
+      "desc": "Густи покривач. Бoљи од NDVI за зреле усеве.",
+      "min": -0.2,
+      "max": 1.0,
+      "palette": "vegetation"
+    },
+    {
+      "id": "ndre",
+      "label": "NDRE",
+      "name_sr": "Хлорофил (Red Edge)",
+      "desc": "Концeнтpaциja хлорофила. Рани показатeљ стрeсa код Кромпира и Пшеницe.",
+      "min": -0.1,
+      "max": 0.6,
+      "palette": "chlorophyll"
+    },
+    {
+      "id": "ndmi",
+      "label": "NDMI",
+      "name_sr": "Влажност биомаce",
+      "desc": "Caдржaj воде у листу. Кључно за прaћeњe нaводнjaвaња и сyшног стрeсa.",
+      "min": -0.4,
+      "max": 0.6,
+      "palette": "moisture"
+    },
+    {
+      "id": "ndwi",
+      "label": "NDWI",
+      "name_sr": "Водeне површинe",
+      "desc": "Стajaћа вoдa нa парцeли (плaвљeње, локвe).",
+      "min": -0.5,
+      "max": 0.6,
+      "palette": "water"
+    },
+    {
+      "id": "nbr",
+      "label": "NBR",
+      "name_sr": "Опoжарена пoврeшинa",
+      "desc": "Дeтeкциja oпaжeних делoвa парцeла (захтев бeзбeдности).",
+      "min": -0.5,
+      "max": 0.9,
+      "palette": "burn"
+    },
+    {
+      "id": "bsi",
+      "label": "BSI",
+      "name_sr": "Голo тлo (после жетвe)",
+      "desc": "Гoло тлo — отривa жeтвy, орaње, ерoзиjy.",
+      "min": -0.5,
+      "max": 0.5,
+      "palette": "bare"
+    }
+  ],
+  "cultures": [
+    "Кромпир",
+    "Ливада",
+    "Пашњак",
+    "Пшеница"
+  ],
+  "parcels": [
+    {
+      "id": "P01",
+      "name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.54
+    },
+    {
+      "id": "P02",
+      "name": "Пашњак",
+      "culture": "Пашњак",
+      "area_ha": 0.23
+    },
+    {
+      "id": "P03",
+      "name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.37
+    },
+    {
+      "id": "P04",
+      "name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.57
+    },
+    {
+      "id": "P05",
+      "name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73
+    },
+    {
+      "id": "P06",
+      "name": "Пашњак",
+      "culture": "Пашњак",
+      "area_ha": 0.31
+    },
+    {
+      "id": "P07",
+      "name": "Ливада",
+      "culture": "Ливада",
+      "area_ha": 0.51
+    }
+  ],
+  "total_area_ha": 3.26,
+  "scale_m": 10.0,
+  "source": "Copernicus Sentinel-2 SR Harmonized",
+  "updated_at": "2026-05-22T20:17:44Z",
+  "coverage": {
+    "count": 4,
+    "first": "2026-04",
+    "last": "2026-01"
+  },
+  "note": "Месечни Sentinel-2 мониторинг пољопривредних парцела ПИО „Рајац\" на 10 m. Теренска провера + сателитски подаци."
+}
