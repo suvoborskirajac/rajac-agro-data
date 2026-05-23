@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "new_alerts": [
+    {
+      "parcel_id": "P01",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.54,
+      "acquisition": "2026-05-20",
+      "type": "recovery",
+      "label": "Опоравак",
+      "level": "info",
+      "color": "#7cc26b",
+      "icon": "🌱",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.7868,
+          "baseline": 0.7019,
+          "delta": 0.0849,
+          "threshold": "gain>=0.05 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-05-23T12:37:08.795872+00:00"
+    }
+  ],
+  "generated_at": "2026-05-23T12:37:08.800139+00:00"
+}

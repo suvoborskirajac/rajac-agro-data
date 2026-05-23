@@ -1,0 +1,100 @@
+{
+  "drought_stress": {
+    "label": "Сушни стрес",
+    "level": "warning",
+    "color": "#f6c95f",
+    "icon": "💧",
+    "logic": "OR",
+    "conditions": [
+      {
+        "index": "ndmi",
+        "delta_days": 7,
+        "drop_at_least": 0.08
+      },
+      {
+        "index": "ndre",
+        "delta_days": 7,
+        "drop_at_least": 0.05
+      }
+    ]
+  },
+  "vitality_drop": {
+    "label": "Пад виталности",
+    "level": "warning",
+    "color": "#f6c95f",
+    "icon": "🌿",
+    "logic": "AND",
+    "conditions": [
+      {
+        "index": "ndvi",
+        "delta_days": 7,
+        "drop_at_least": 0.08
+      }
+    ]
+  },
+  "crisis_stress": {
+    "label": "Кризни стрес",
+    "level": "critical",
+    "color": "#ee6a55",
+    "icon": "🔥",
+    "logic": "AND",
+    "conditions": [
+      {
+        "index": "ndvi",
+        "delta_days": 7,
+        "drop_at_least": 0.15
+      },
+      {
+        "index": "ndmi",
+        "delta_days": 7,
+        "drop_at_least": 0.1
+      }
+    ]
+  },
+  "fire_or_harvest": {
+    "label": "Могући пожар или нагла жетва",
+    "level": "critical",
+    "color": "#ee6a55",
+    "icon": "🚒",
+    "logic": "AND",
+    "conditions": [
+      {
+        "index": "nbr",
+        "delta_days": 5,
+        "drop_at_least": 0.2
+      }
+    ]
+  },
+  "bare_soil": {
+    "label": "Голо тло / могућа ерозија",
+    "level": "warning",
+    "color": "#f6a763",
+    "icon": "🟫",
+    "logic": "OR",
+    "conditions": [
+      {
+        "index": "bsi",
+        "absolute_at_least": 0.2
+      },
+      {
+        "index": "bsi",
+        "delta_days": 7,
+        "gain_at_least": 0.15
+      }
+    ]
+  },
+  "recovery": {
+    "label": "Опоравак",
+    "level": "info",
+    "color": "#7cc26b",
+    "icon": "🌱",
+    "logic": "AND",
+    "conditions": [
+      {
+        "index": "ndvi",
+        "delta_days": 7,
+        "gain_at_least": 0.05
+      }
+    ]
+  }
+}
