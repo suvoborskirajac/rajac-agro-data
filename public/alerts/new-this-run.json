@@ -1,5 +1,140 @@
 {
   "ok": true,
-  "new_alerts": [],
-  "generated_at": "2026-05-27T08:44:02.683844+00:00"
+  "new_alerts": [
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-05-27",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": 0.3171,
+          "baseline": 0.5049,
+          "delta": -0.1878,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.4659,
+          "baseline": 0.6009,
+          "delta": -0.135,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR",
+      "first_seen_at": "2026-05-28T08:50:12.328440+00:00"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-05-27",
+      "type": "vitality_drop",
+      "label": "Пад виталности",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "🌿",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.6469,
+          "baseline": 0.854,
+          "delta": -0.2071,
+          "threshold": "drop>=0.08 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-05-28T08:50:12.328528+00:00"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-05-27",
+      "type": "crisis_stress",
+      "label": "Кризни стрес",
+      "level": "critical",
+      "color": "#ee6a55",
+      "icon": "🔥",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.6469,
+          "baseline": 0.854,
+          "delta": -0.2071,
+          "threshold": "drop>=0.15 over 7d"
+        },
+        {
+          "index": "ndmi",
+          "current": 0.3171,
+          "baseline": 0.5049,
+          "delta": -0.1878,
+          "threshold": "drop>=0.1 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-05-28T08:50:12.328602+00:00"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-05-27",
+      "type": "fire_or_harvest",
+      "label": "Могући пожар или нагла жетва",
+      "level": "critical",
+      "color": "#ee6a55",
+      "icon": "🚒",
+      "evidence": [
+        {
+          "index": "nbr",
+          "current": 0.491,
+          "baseline": 0.7056,
+          "delta": -0.2146,
+          "threshold": "drop>=0.2 over 5d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-05-28T08:50:12.328679+00:00"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-05-27",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": -0.2377,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": -0.2377,
+          "baseline": -0.4524,
+          "delta": 0.2147,
+          "threshold": "gain>=0.15 over 7d"
+        }
+      ],
+      "logic": "OR",
+      "first_seen_at": "2026-05-28T08:50:12.328735+00:00"
+    }
+  ],
+  "generated_at": "2026-05-28T08:50:12.337865+00:00"
 }

@@ -2,11 +2,11 @@
   "ok": true,
   "active": [
     {
-      "parcel_id": "P01",
+      "parcel_id": "P05",
       "parcel_name": "Пшеница",
       "culture": "Пшеница",
-      "area_ha": 0.54,
-      "acquisition": "2026-05-25",
+      "area_ha": 0.73,
+      "acquisition": "2026-05-27",
       "type": "drought_stress",
       "label": "Сушни стрес",
       "level": "warning",
@@ -15,86 +15,128 @@
       "evidence": [
         {
           "index": "ndmi",
-          "current": 0.3281,
-          "baseline": 0.3844,
-          "delta": -0.0563,
+          "current": 0.3171,
+          "baseline": 0.5049,
+          "delta": -0.1878,
           "threshold": "drop>=0.08 over 7d"
         },
         {
           "index": "ndre",
-          "current": 0.4899,
-          "baseline": 0.5475,
-          "delta": -0.0576,
+          "current": 0.4659,
+          "baseline": 0.6009,
+          "delta": -0.135,
           "threshold": "drop>=0.05 over 7d"
         }
       ],
       "logic": "OR"
     },
     {
-      "parcel_id": "P06",
-      "parcel_name": "Пашњак",
-      "culture": "Пашњак",
-      "area_ha": 0.31,
-      "acquisition": "2026-05-25",
-      "type": "drought_stress",
-      "label": "Сушни стрес",
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-05-27",
+      "type": "vitality_drop",
+      "label": "Пад виталности",
       "level": "warning",
       "color": "#f6c95f",
-      "icon": "💧",
+      "icon": "🌿",
       "evidence": [
         {
-          "index": "ndmi",
-          "current": 0.1627,
-          "baseline": 0.1944,
-          "delta": -0.0317,
+          "index": "ndvi",
+          "current": 0.6469,
+          "baseline": 0.854,
+          "delta": -0.2071,
           "threshold": "drop>=0.08 over 7d"
-        },
-        {
-          "index": "ndre",
-          "current": 0.3857,
-          "baseline": 0.4418,
-          "delta": -0.0561,
-          "threshold": "drop>=0.05 over 7d"
         }
       ],
-      "logic": "OR"
+      "logic": "AND"
     },
     {
-      "parcel_id": "P07",
-      "parcel_name": "Ливада",
-      "culture": "Ливада",
-      "area_ha": 0.51,
-      "acquisition": "2026-05-25",
-      "type": "drought_stress",
-      "label": "Сушни стрес",
-      "level": "warning",
-      "color": "#f6c95f",
-      "icon": "💧",
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-05-27",
+      "type": "crisis_stress",
+      "label": "Кризни стрес",
+      "level": "critical",
+      "color": "#ee6a55",
+      "icon": "🔥",
       "evidence": [
         {
-          "index": "ndmi",
-          "current": 0.3,
-          "baseline": 0.3596,
-          "delta": -0.0596,
-          "threshold": "drop>=0.08 over 7d"
+          "index": "ndvi",
+          "current": 0.6469,
+          "baseline": 0.854,
+          "delta": -0.2071,
+          "threshold": "drop>=0.15 over 7d"
         },
         {
-          "index": "ndre",
-          "current": 0.479,
-          "baseline": 0.5565,
-          "delta": -0.0775,
-          "threshold": "drop>=0.05 over 7d"
+          "index": "ndmi",
+          "current": 0.3171,
+          "baseline": 0.5049,
+          "delta": -0.1878,
+          "threshold": "drop>=0.1 over 7d"
+        }
+      ],
+      "logic": "AND"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-05-27",
+      "type": "fire_or_harvest",
+      "label": "Могући пожар или нагла жетва",
+      "level": "critical",
+      "color": "#ee6a55",
+      "icon": "🚒",
+      "evidence": [
+        {
+          "index": "nbr",
+          "current": 0.491,
+          "baseline": 0.7056,
+          "delta": -0.2146,
+          "threshold": "drop>=0.2 over 5d"
+        }
+      ],
+      "logic": "AND"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-05-27",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": -0.2377,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": -0.2377,
+          "baseline": -0.4524,
+          "delta": 0.2147,
+          "threshold": "gain>=0.15 over 7d"
         }
       ],
       "logic": "OR"
     }
   ],
-  "count": 3,
+  "count": 5,
   "by_level": {
-    "critical": 0,
+    "critical": 2,
     "warning": 3,
     "info": 0
   },
-  "latest_acquisition": "2026-05-25",
-  "generated_at": "2026-05-27T08:44:02Z"
+  "latest_acquisition": "2026-05-27",
+  "generated_at": "2026-05-28T08:50:12Z"
 }
