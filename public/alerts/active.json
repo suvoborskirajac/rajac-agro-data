@@ -1,40 +1,12 @@
 {
   "ok": true,
-  "active": [
-    {
-      "parcel_id": "P04",
-      "parcel_name": "Кромпир",
-      "culture": "Кромпир",
-      "area_ha": 0.57,
-      "acquisition": "2026-05-28",
-      "type": "bare_soil",
-      "label": "Голо тло / могућа ерозија",
-      "level": "warning",
-      "color": "#f6a763",
-      "icon": "🟫",
-      "evidence": [
-        {
-          "index": "bsi",
-          "current": 0.2006,
-          "threshold": ">=0.2"
-        },
-        {
-          "index": "bsi",
-          "current": 0.2006,
-          "baseline": 0.1633,
-          "delta": 0.0373,
-          "threshold": "gain>=0.15 over 7d"
-        }
-      ],
-      "logic": "OR"
-    }
-  ],
-  "count": 1,
+  "active": [],
+  "count": 0,
   "by_level": {
     "critical": 0,
-    "warning": 1,
+    "warning": 0,
     "info": 0
   },
-  "latest_acquisition": "2026-05-28",
-  "generated_at": "2026-05-30T07:45:29Z"
+  "latest_acquisition": "2026-05-30",
+  "generated_at": "2026-05-31T08:19:34Z"
 }
