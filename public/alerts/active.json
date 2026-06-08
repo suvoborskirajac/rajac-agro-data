@@ -1,12 +1,57 @@
 {
   "ok": true,
-  "active": [],
-  "count": 0,
+  "active": [
+    {
+      "parcel_id": "P03",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.37,
+      "acquisition": "2026-06-07",
+      "type": "recovery",
+      "label": "Опоравак",
+      "level": "info",
+      "color": "#7cc26b",
+      "icon": "🌱",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.3005,
+          "baseline": 0.1575,
+          "delta": 0.143,
+          "threshold": "gain>=0.05 over 7d"
+        }
+      ],
+      "logic": "AND"
+    },
+    {
+      "parcel_id": "P04",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.57,
+      "acquisition": "2026-06-07",
+      "type": "recovery",
+      "label": "Опоравак",
+      "level": "info",
+      "color": "#7cc26b",
+      "icon": "🌱",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.3339,
+          "baseline": 0.1868,
+          "delta": 0.1471,
+          "threshold": "gain>=0.05 over 7d"
+        }
+      ],
+      "logic": "AND"
+    }
+  ],
+  "count": 2,
   "by_level": {
     "critical": 0,
     "warning": 0,
-    "info": 0
+    "info": 2
   },
-  "latest_acquisition": "2026-05-30",
-  "generated_at": "2026-06-07T08:27:28Z"
+  "latest_acquisition": "2026-06-07",
+  "generated_at": "2026-06-08T09:53:03Z"
 }
