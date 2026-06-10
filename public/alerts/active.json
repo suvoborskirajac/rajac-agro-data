@@ -6,7 +6,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.37,
-      "acquisition": "2026-06-07",
+      "acquisition": "2026-06-09",
       "type": "recovery",
       "label": "Опоравак",
       "level": "info",
@@ -15,9 +15,9 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.3005,
+          "current": 0.2597,
           "baseline": 0.1575,
-          "delta": 0.143,
+          "delta": 0.1022,
           "threshold": "gain>=0.05 over 7d"
         }
       ],
@@ -28,7 +28,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.57,
-      "acquisition": "2026-06-07",
+      "acquisition": "2026-06-09",
       "type": "recovery",
       "label": "Опоравак",
       "level": "info",
@@ -37,9 +37,9 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.3339,
+          "current": 0.2758,
           "baseline": 0.1868,
-          "delta": 0.1471,
+          "delta": 0.089,
           "threshold": "gain>=0.05 over 7d"
         }
       ],
@@ -52,6 +52,6 @@
     "warning": 0,
     "info": 2
   },
-  "latest_acquisition": "2026-06-07",
-  "generated_at": "2026-06-09T08:37:09Z"
+  "latest_acquisition": "2026-06-09",
+  "generated_at": "2026-06-10T08:56:52Z"
 }
