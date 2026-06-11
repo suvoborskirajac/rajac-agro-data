@@ -1,52 +1,5 @@
 {
   "ok": true,
-  "new_alerts": [
-    {
-      "parcel_id": "P03",
-      "parcel_name": "Кромпир",
-      "culture": "Кромпир",
-      "area_ha": 0.37,
-      "acquisition": "2026-06-09",
-      "type": "recovery",
-      "label": "Опоравак",
-      "level": "info",
-      "color": "#7cc26b",
-      "icon": "🌱",
-      "evidence": [
-        {
-          "index": "ndvi",
-          "current": 0.2597,
-          "baseline": 0.1575,
-          "delta": 0.1022,
-          "threshold": "gain>=0.05 over 7d"
-        }
-      ],
-      "logic": "AND",
-      "first_seen_at": "2026-06-10T08:56:52.426088+00:00"
-    },
-    {
-      "parcel_id": "P04",
-      "parcel_name": "Кромпир",
-      "culture": "Кромпир",
-      "area_ha": 0.57,
-      "acquisition": "2026-06-09",
-      "type": "recovery",
-      "label": "Опоравак",
-      "level": "info",
-      "color": "#7cc26b",
-      "icon": "🌱",
-      "evidence": [
-        {
-          "index": "ndvi",
-          "current": 0.2758,
-          "baseline": 0.1868,
-          "delta": 0.089,
-          "threshold": "gain>=0.05 over 7d"
-        }
-      ],
-      "logic": "AND",
-      "first_seen_at": "2026-06-10T08:56:52.426187+00:00"
-    }
-  ],
-  "generated_at": "2026-06-10T08:56:52.443421+00:00"
+  "new_alerts": [],
+  "generated_at": "2026-06-11T09:17:59.298918+00:00"
 }
