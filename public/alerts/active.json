@@ -2,62 +2,11 @@
   "ok": true,
   "active": [
     {
-      "parcel_id": "P01",
-      "parcel_name": "Пшеница",
-      "culture": "Пшеница",
-      "area_ha": 0.54,
-      "acquisition": "2026-06-17",
-      "type": "drought_stress",
-      "label": "Сушни стрес",
-      "level": "warning",
-      "color": "#f6c95f",
-      "icon": "💧",
-      "evidence": [
-        {
-          "index": "ndmi",
-          "current": 0.3558,
-          "baseline": 0.354,
-          "delta": 0.0018,
-          "threshold": "drop>=0.08 over 7d"
-        },
-        {
-          "index": "ndre",
-          "current": 0.5032,
-          "baseline": 0.5618,
-          "delta": -0.0586,
-          "threshold": "drop>=0.05 over 7d"
-        }
-      ],
-      "logic": "OR"
-    },
-    {
-      "parcel_id": "P03",
-      "parcel_name": "Кромпир",
-      "culture": "Кромпир",
-      "area_ha": 0.37,
-      "acquisition": "2026-06-17",
-      "type": "recovery",
-      "label": "Опоравак",
-      "level": "info",
-      "color": "#7cc26b",
-      "icon": "🌱",
-      "evidence": [
-        {
-          "index": "ndvi",
-          "current": 0.3554,
-          "baseline": 0.2597,
-          "delta": 0.0957,
-          "threshold": "gain>=0.05 over 7d"
-        }
-      ],
-      "logic": "AND"
-    },
-    {
       "parcel_id": "P04",
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.57,
-      "acquisition": "2026-06-17",
+      "acquisition": "2026-06-19",
       "type": "recovery",
       "label": "Опоравак",
       "level": "info",
@@ -66,21 +15,21 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.4507,
-          "baseline": 0.2758,
-          "delta": 0.1749,
+          "current": 0.471,
+          "baseline": 0.3599,
+          "delta": 0.1111,
           "threshold": "gain>=0.05 over 7d"
         }
       ],
       "logic": "AND"
     }
   ],
-  "count": 3,
+  "count": 1,
   "by_level": {
     "critical": 0,
-    "warning": 1,
-    "info": 2
+    "warning": 0,
+    "info": 1
   },
-  "latest_acquisition": "2026-06-17",
-  "generated_at": "2026-06-19T09:47:57Z"
+  "latest_acquisition": "2026-06-19",
+  "generated_at": "2026-06-20T08:26:12Z"
 }
