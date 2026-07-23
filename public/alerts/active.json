@@ -6,143 +6,19 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.57,
-      "acquisition": "2026-07-16",
-      "type": "vitality_drop",
-      "label": "Пад виталности",
-      "level": "warning",
-      "color": "#f6c95f",
-      "icon": "🌿",
+      "acquisition": "2026-07-22",
+      "type": "recovery",
+      "label": "Опоравак",
+      "level": "info",
+      "color": "#7cc26b",
+      "icon": "🌱",
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.6574,
-          "baseline": 0.74,
-          "delta": -0.0826,
-          "threshold": "drop>=0.08 over 7d"
-        }
-      ],
-      "logic": "AND"
-    },
-    {
-      "parcel_id": "P05",
-      "parcel_name": "Пшеница",
-      "culture": "Пшеница",
-      "area_ha": 0.73,
-      "acquisition": "2026-07-16",
-      "type": "vitality_drop",
-      "label": "Пад виталности",
-      "level": "warning",
-      "color": "#f6c95f",
-      "icon": "🌿",
-      "evidence": [
-        {
-          "index": "ndvi",
-          "current": 0.2615,
-          "baseline": 0.4152,
-          "delta": -0.1537,
-          "threshold": "drop>=0.08 over 7d"
-        }
-      ],
-      "logic": "AND"
-    },
-    {
-      "parcel_id": "P06",
-      "parcel_name": "Пашњак",
-      "culture": "Пашњак",
-      "area_ha": 0.31,
-      "acquisition": "2026-07-16",
-      "type": "drought_stress",
-      "label": "Сушни стрес",
-      "level": "warning",
-      "color": "#f6c95f",
-      "icon": "💧",
-      "evidence": [
-        {
-          "index": "ndmi",
-          "current": -0.1021,
-          "baseline": 0.0533,
-          "delta": -0.1554,
-          "threshold": "drop>=0.08 over 7d"
-        },
-        {
-          "index": "ndre",
-          "current": 0.2339,
-          "baseline": 0.3304,
-          "delta": -0.0965,
-          "threshold": "drop>=0.05 over 7d"
-        }
-      ],
-      "logic": "OR"
-    },
-    {
-      "parcel_id": "P06",
-      "parcel_name": "Пашњак",
-      "culture": "Пашњак",
-      "area_ha": 0.31,
-      "acquisition": "2026-07-16",
-      "type": "vitality_drop",
-      "label": "Пад виталности",
-      "level": "warning",
-      "color": "#f6c95f",
-      "icon": "🌿",
-      "evidence": [
-        {
-          "index": "ndvi",
-          "current": 0.3771,
-          "baseline": 0.5978,
-          "delta": -0.2207,
-          "threshold": "drop>=0.08 over 7d"
-        }
-      ],
-      "logic": "AND"
-    },
-    {
-      "parcel_id": "P06",
-      "parcel_name": "Пашњак",
-      "culture": "Пашњак",
-      "area_ha": 0.31,
-      "acquisition": "2026-07-16",
-      "type": "crisis_stress",
-      "label": "Кризни стрес",
-      "level": "critical",
-      "color": "#ee6a55",
-      "icon": "🔥",
-      "evidence": [
-        {
-          "index": "ndvi",
-          "current": 0.3771,
-          "baseline": 0.5978,
-          "delta": -0.2207,
-          "threshold": "drop>=0.15 over 7d"
-        },
-        {
-          "index": "ndmi",
-          "current": -0.1021,
-          "baseline": 0.0533,
-          "delta": -0.1554,
-          "threshold": "drop>=0.1 over 7d"
-        }
-      ],
-      "logic": "AND"
-    },
-    {
-      "parcel_id": "P06",
-      "parcel_name": "Пашњак",
-      "culture": "Пашњак",
-      "area_ha": 0.31,
-      "acquisition": "2026-07-16",
-      "type": "fire_or_harvest",
-      "label": "Могући пожар или нагла жетва",
-      "level": "critical",
-      "color": "#ee6a55",
-      "icon": "🚒",
-      "evidence": [
-        {
-          "index": "nbr",
-          "current": 0.1135,
-          "baseline": 0.3189,
-          "delta": -0.2054,
-          "threshold": "drop>=0.2 over 5d"
+          "current": 0.785,
+          "baseline": 0.7249,
+          "delta": 0.0601,
+          "threshold": "gain>=0.05 over 7d"
         }
       ],
       "logic": "AND"
@@ -152,7 +28,36 @@
       "parcel_name": "Ливада",
       "culture": "Ливада",
       "area_ha": 0.51,
-      "acquisition": "2026-07-16",
+      "acquisition": "2026-07-22",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": -0.0555,
+          "baseline": 0.0679,
+          "delta": -0.1234,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.2102,
+          "baseline": 0.3425,
+          "delta": -0.1323,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
+      "parcel_id": "P07",
+      "parcel_name": "Ливада",
+      "culture": "Ливада",
+      "area_ha": 0.51,
+      "acquisition": "2026-07-22",
       "type": "vitality_drop",
       "label": "Пад виталности",
       "level": "warning",
@@ -161,21 +66,50 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.5614,
-          "baseline": 0.6503,
-          "delta": -0.0889,
+          "current": 0.3439,
+          "baseline": 0.6159,
+          "delta": -0.272,
           "threshold": "drop>=0.08 over 7d"
+        }
+      ],
+      "logic": "AND"
+    },
+    {
+      "parcel_id": "P07",
+      "parcel_name": "Ливада",
+      "culture": "Ливада",
+      "area_ha": 0.51,
+      "acquisition": "2026-07-22",
+      "type": "crisis_stress",
+      "label": "Кризни стрес",
+      "level": "critical",
+      "color": "#ee6a55",
+      "icon": "🔥",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.3439,
+          "baseline": 0.6159,
+          "delta": -0.272,
+          "threshold": "drop>=0.15 over 7d"
+        },
+        {
+          "index": "ndmi",
+          "current": -0.0555,
+          "baseline": 0.0679,
+          "delta": -0.1234,
+          "threshold": "drop>=0.1 over 7d"
         }
       ],
       "logic": "AND"
     }
   ],
-  "count": 7,
+  "count": 4,
   "by_level": {
-    "critical": 2,
-    "warning": 5,
-    "info": 0
+    "critical": 1,
+    "warning": 2,
+    "info": 1
   },
-  "latest_acquisition": "2026-07-16",
-  "generated_at": "2026-07-22T07:38:15Z"
+  "latest_acquisition": "2026-07-22",
+  "generated_at": "2026-07-23T07:38:53Z"
 }
