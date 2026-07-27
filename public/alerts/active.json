@@ -2,11 +2,67 @@
   "ok": true,
   "active": [
     {
-      "parcel_id": "P04",
+      "parcel_id": "P01",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.54,
+      "acquisition": "2026-07-26",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": 0.0146,
+          "baseline": 0.17,
+          "delta": -0.1554,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.247,
+          "baseline": 0.2615,
+          "delta": -0.0145,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
+      "parcel_id": "P01",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.54,
+      "acquisition": "2026-07-26",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": 0.0597,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": 0.0597,
+          "baseline": -0.1034,
+          "delta": 0.1631,
+          "threshold": "gain>=0.15 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
+      "parcel_id": "P03",
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
-      "area_ha": 0.57,
-      "acquisition": "2026-07-22",
+      "area_ha": 0.37,
+      "acquisition": "2026-07-26",
       "type": "recovery",
       "label": "Опоравак",
       "level": "info",
@@ -15,9 +71,87 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.785,
-          "baseline": 0.7249,
-          "delta": 0.0601,
+          "current": 0.7619,
+          "baseline": 0.6277,
+          "delta": 0.1342,
+          "threshold": "gain>=0.05 over 7d"
+        }
+      ],
+      "logic": "AND"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-07-26",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": 0.1059,
+          "baseline": 0.2436,
+          "delta": -0.1377,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.2786,
+          "baseline": 0.2203,
+          "delta": 0.0583,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-07-26",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": -0.0137,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": -0.0137,
+          "baseline": -0.1854,
+          "delta": 0.1717,
+          "threshold": "gain>=0.15 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-07-26",
+      "type": "recovery",
+      "label": "Опоравак",
+      "level": "info",
+      "color": "#7cc26b",
+      "icon": "🌱",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.4444,
+          "baseline": 0.2615,
+          "delta": 0.1829,
           "threshold": "gain>=0.05 over 7d"
         }
       ],
@@ -28,7 +162,7 @@
       "parcel_name": "Ливада",
       "culture": "Ливада",
       "area_ha": 0.51,
-      "acquisition": "2026-07-22",
+      "acquisition": "2026-07-26",
       "type": "drought_stress",
       "label": "Сушни стрес",
       "level": "warning",
@@ -37,16 +171,16 @@
       "evidence": [
         {
           "index": "ndmi",
-          "current": -0.0555,
-          "baseline": 0.0679,
-          "delta": -0.1234,
+          "current": -0.1326,
+          "baseline": 0.0736,
+          "delta": -0.2062,
           "threshold": "drop>=0.08 over 7d"
         },
         {
           "index": "ndre",
-          "current": 0.2102,
-          "baseline": 0.3425,
-          "delta": -0.1323,
+          "current": 0.2106,
+          "baseline": 0.3517,
+          "delta": -0.1411,
           "threshold": "drop>=0.05 over 7d"
         }
       ],
@@ -57,7 +191,7 @@
       "parcel_name": "Ливада",
       "culture": "Ливада",
       "area_ha": 0.51,
-      "acquisition": "2026-07-22",
+      "acquisition": "2026-07-26",
       "type": "vitality_drop",
       "label": "Пад виталности",
       "level": "warning",
@@ -66,9 +200,9 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.3439,
-          "baseline": 0.6159,
-          "delta": -0.272,
+          "current": 0.3583,
+          "baseline": 0.5614,
+          "delta": -0.2031,
           "threshold": "drop>=0.08 over 7d"
         }
       ],
@@ -79,7 +213,7 @@
       "parcel_name": "Ливада",
       "culture": "Ливада",
       "area_ha": 0.51,
-      "acquisition": "2026-07-22",
+      "acquisition": "2026-07-26",
       "type": "crisis_stress",
       "label": "Кризни стрес",
       "level": "critical",
@@ -88,28 +222,55 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.3439,
-          "baseline": 0.6159,
-          "delta": -0.272,
+          "current": 0.3583,
+          "baseline": 0.5614,
+          "delta": -0.2031,
           "threshold": "drop>=0.15 over 7d"
         },
         {
           "index": "ndmi",
-          "current": -0.0555,
-          "baseline": 0.0679,
-          "delta": -0.1234,
+          "current": -0.1326,
+          "baseline": 0.0736,
+          "delta": -0.2062,
           "threshold": "drop>=0.1 over 7d"
         }
       ],
       "logic": "AND"
+    },
+    {
+      "parcel_id": "P07",
+      "parcel_name": "Ливада",
+      "culture": "Ливада",
+      "area_ha": 0.51,
+      "acquisition": "2026-07-26",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": 0.1658,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": 0.1658,
+          "baseline": -0.0402,
+          "delta": 0.206,
+          "threshold": "gain>=0.15 over 7d"
+        }
+      ],
+      "logic": "OR"
     }
   ],
-  "count": 4,
+  "count": 10,
   "by_level": {
     "critical": 1,
-    "warning": 2,
-    "info": 1
+    "warning": 7,
+    "info": 2
   },
-  "latest_acquisition": "2026-07-22",
-  "generated_at": "2026-07-26T07:41:01Z"
+  "latest_acquisition": "2026-07-26",
+  "generated_at": "2026-07-27T08:38:51Z"
 }
