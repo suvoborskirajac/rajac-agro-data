@@ -2,11 +2,40 @@
   "ok": true,
   "active": [
     {
+      "parcel_id": "P02",
+      "parcel_name": "Пашњак",
+      "culture": "Пашњак",
+      "area_ha": 0.23,
+      "acquisition": "2026-08-06",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": -0.1111,
+          "baseline": -0.0789,
+          "delta": -0.0322,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.23,
+          "baseline": 0.2891,
+          "delta": -0.0591,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
       "parcel_id": "P03",
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.37,
-      "acquisition": "2026-08-05",
+      "acquisition": "2026-08-06",
       "type": "drought_stress",
       "label": "Сушни стрес",
       "level": "warning",
@@ -15,16 +44,16 @@
       "evidence": [
         {
           "index": "ndmi",
-          "current": 0.3226,
+          "current": 0.3146,
           "baseline": 0.3746,
-          "delta": -0.052,
+          "delta": -0.06,
           "threshold": "drop>=0.08 over 7d"
         },
         {
           "index": "ndre",
-          "current": 0.5469,
+          "current": 0.509,
           "baseline": 0.6043,
-          "delta": -0.0574,
+          "delta": -0.0953,
           "threshold": "drop>=0.05 over 7d"
         }
       ],
@@ -35,7 +64,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.57,
-      "acquisition": "2026-08-05",
+      "acquisition": "2026-08-06",
       "type": "drought_stress",
       "label": "Сушни стрес",
       "level": "warning",
@@ -44,16 +73,16 @@
       "evidence": [
         {
           "index": "ndmi",
-          "current": 0.1397,
+          "current": 0.1159,
           "baseline": 0.2488,
-          "delta": -0.1091,
+          "delta": -0.1329,
           "threshold": "drop>=0.08 over 7d"
         },
         {
           "index": "ndre",
-          "current": 0.3917,
+          "current": 0.3604,
           "baseline": 0.5036,
-          "delta": -0.1119,
+          "delta": -0.1432,
           "threshold": "drop>=0.05 over 7d"
         }
       ],
@@ -64,7 +93,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.57,
-      "acquisition": "2026-08-05",
+      "acquisition": "2026-08-06",
       "type": "vitality_drop",
       "label": "Пад виталности",
       "level": "warning",
@@ -73,9 +102,9 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.6081,
+          "current": 0.5986,
           "baseline": 0.7257,
-          "delta": -0.1176,
+          "delta": -0.1271,
           "threshold": "drop>=0.08 over 7d"
         }
       ],
@@ -86,7 +115,7 @@
       "parcel_name": "Пшеница",
       "culture": "Пшеница",
       "area_ha": 0.73,
-      "acquisition": "2026-08-05",
+      "acquisition": "2026-08-06",
       "type": "drought_stress",
       "label": "Сушни стрес",
       "level": "warning",
@@ -95,16 +124,16 @@
       "evidence": [
         {
           "index": "ndmi",
-          "current": 0.066,
+          "current": 0.0567,
           "baseline": 0.1186,
-          "delta": -0.0526,
+          "delta": -0.0619,
           "threshold": "drop>=0.08 over 7d"
         },
         {
           "index": "ndre",
-          "current": 0.2141,
+          "current": 0.2048,
           "baseline": 0.3118,
-          "delta": -0.0977,
+          "delta": -0.107,
           "threshold": "drop>=0.05 over 7d"
         }
       ],
@@ -115,7 +144,7 @@
       "parcel_name": "Пшеница",
       "culture": "Пшеница",
       "area_ha": 0.73,
-      "acquisition": "2026-08-05",
+      "acquisition": "2026-08-06",
       "type": "vitality_drop",
       "label": "Пад виталности",
       "level": "warning",
@@ -124,21 +153,21 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.338,
+          "current": 0.3324,
           "baseline": 0.4767,
-          "delta": -0.1387,
+          "delta": -0.1443,
           "threshold": "drop>=0.08 over 7d"
         }
       ],
       "logic": "AND"
     }
   ],
-  "count": 5,
+  "count": 6,
   "by_level": {
     "critical": 0,
-    "warning": 5,
+    "warning": 6,
     "info": 0
   },
-  "latest_acquisition": "2026-08-05",
-  "generated_at": "2026-08-06T07:45:06Z"
+  "latest_acquisition": "2026-08-06",
+  "generated_at": "2026-08-07T06:12:18Z"
 }
