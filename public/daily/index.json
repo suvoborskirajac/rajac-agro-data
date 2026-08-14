@@ -2,8 +2,15 @@
   "ok": true,
   "label": "PIO Rajac — пољопривредне парцеле (дневни)",
   "kind": "daily",
-  "latest": "2026-08-11",
+  "latest": "2026-08-13",
   "acquisitions": [
+    {
+      "id": "2026-08-13",
+      "date": "2026-08-13",
+      "image_count": 1,
+      "valid_coverage_pct": 100.0,
+      "kind": "daily"
+    },
     {
       "id": "2026-08-11",
       "date": "2026-08-11",
@@ -333,5 +340,5 @@
   ],
   "total_area_ha": 3.26,
   "source": "Copernicus Sentinel-2 SR Harmonized",
-  "updated_at": "2026-08-13T06:21:19Z"
+  "updated_at": "2026-08-14T06:20:03Z"
 }
