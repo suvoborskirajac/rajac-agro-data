@@ -1,5 +1,142 @@
 {
   "ok": true,
-  "new_alerts": [],
-  "generated_at": "2026-08-15T05:31:10.249096+00:00"
+  "new_alerts": [
+    {
+      "parcel_id": "P03",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.37,
+      "acquisition": "2026-08-15",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": 0.2311,
+          "baseline": 0.2871,
+          "delta": -0.056,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.4502,
+          "baseline": 0.5202,
+          "delta": -0.07,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR",
+      "first_seen_at": "2026-08-16T05:34:34.944730+00:00"
+    },
+    {
+      "parcel_id": "P04",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.57,
+      "acquisition": "2026-08-15",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": 0.0167,
+          "baseline": 0.0782,
+          "delta": -0.0615,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.28,
+          "baseline": 0.348,
+          "delta": -0.068,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR",
+      "first_seen_at": "2026-08-16T05:34:34.944825+00:00"
+    },
+    {
+      "parcel_id": "P04",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.57,
+      "acquisition": "2026-08-15",
+      "type": "vitality_drop",
+      "label": "Пад виталности",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "🌿",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.4468,
+          "baseline": 0.5517,
+          "delta": -0.1049,
+          "threshold": "drop>=0.08 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-08-16T05:34:34.944887+00:00"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-08-15",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": -0.0284,
+          "baseline": 0.0899,
+          "delta": -0.1183,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.139,
+          "baseline": 0.234,
+          "delta": -0.095,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR",
+      "first_seen_at": "2026-08-16T05:34:34.944943+00:00"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-08-15",
+      "type": "vitality_drop",
+      "label": "Пад виталности",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "🌿",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.2492,
+          "baseline": 0.3855,
+          "delta": -0.1363,
+          "threshold": "drop>=0.08 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-08-16T05:34:34.944994+00:00"
+    }
+  ],
+  "generated_at": "2026-08-16T05:34:34.995029+00:00"
 }
