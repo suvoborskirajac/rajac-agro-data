@@ -1,52 +1,5 @@
 {
   "ok": true,
-  "new_alerts": [
-    {
-      "parcel_id": "P03",
-      "parcel_name": "Кромпир",
-      "culture": "Кромпир",
-      "area_ha": 0.37,
-      "acquisition": "2026-08-21",
-      "type": "vitality_drop",
-      "label": "Пад виталности",
-      "level": "warning",
-      "color": "#f6c95f",
-      "icon": "🌿",
-      "evidence": [
-        {
-          "index": "ndvi",
-          "current": 0.6225,
-          "baseline": 0.7149,
-          "delta": -0.0924,
-          "threshold": "drop>=0.08 over 7d"
-        }
-      ],
-      "logic": "AND",
-      "first_seen_at": "2026-08-22T05:33:55.407493+00:00"
-    },
-    {
-      "parcel_id": "P04",
-      "parcel_name": "Кромпир",
-      "culture": "Кромпир",
-      "area_ha": 0.57,
-      "acquisition": "2026-08-21",
-      "type": "vitality_drop",
-      "label": "Пад виталности",
-      "level": "warning",
-      "color": "#f6c95f",
-      "icon": "🌿",
-      "evidence": [
-        {
-          "index": "ndvi",
-          "current": 0.3951,
-          "baseline": 0.4797,
-          "delta": -0.0846,
-          "threshold": "drop>=0.08 over 7d"
-        }
-      ],
-      "logic": "AND",
-      "first_seen_at": "2026-08-22T05:33:55.407589+00:00"
-    }
-  ],
-  "generated_at": "2026-08-22T05:33:55.483180+00:00"
+  "new_alerts": [],
+  "generated_at": "2026-08-23T05:35:33.596553+00:00"
 }
