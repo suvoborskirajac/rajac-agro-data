@@ -1,5 +1,82 @@
 {
   "ok": true,
-  "new_alerts": [],
-  "generated_at": "2026-08-23T05:35:33.596553+00:00"
+  "new_alerts": [
+    {
+      "parcel_id": "P03",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.37,
+      "acquisition": "2026-08-23",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": 0.1364,
+          "baseline": 0.2404,
+          "delta": -0.104,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.3468,
+          "baseline": 0.4411,
+          "delta": -0.0943,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR",
+      "first_seen_at": "2026-08-24T05:44:14.948929+00:00"
+    },
+    {
+      "parcel_id": "P03",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.37,
+      "acquisition": "2026-08-23",
+      "type": "vitality_drop",
+      "label": "Пад виталности",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "🌿",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.584,
+          "baseline": 0.6876,
+          "delta": -0.1036,
+          "threshold": "drop>=0.08 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-08-24T05:44:14.949031+00:00"
+    },
+    {
+      "parcel_id": "P06",
+      "parcel_name": "Пашњак",
+      "culture": "Пашњак",
+      "area_ha": 0.31,
+      "acquisition": "2026-08-23",
+      "type": "recovery",
+      "label": "Опоравак",
+      "level": "info",
+      "color": "#7cc26b",
+      "icon": "🌱",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.4584,
+          "baseline": 0.3997,
+          "delta": 0.0587,
+          "threshold": "gain>=0.05 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-08-24T05:44:14.949093+00:00"
+    }
+  ],
+  "generated_at": "2026-08-24T05:44:15.018264+00:00"
 }
