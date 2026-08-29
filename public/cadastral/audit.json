@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "parcel_count": 2299,
+  "records_total": 2299,
+  "records_per_parcel_min": 1,
+  "records_per_parcel_max": 1,
+  "records_per_parcel_avg": 1.0,
+  "acquisition_count": 1,
+  "latest": "2026-08-28",
+  "coverage_avg_pct": 100.0,
+  "numeric_values_reconstructed_from_png": false,
+  "generated_at": "2026-08-29T12:00:04Z"
+}
