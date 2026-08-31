@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-08-31T16:11:05Z",
+  "updated": "2026-08-31T16:16:54Z",
   "parcel_source": "public/boundaries/pio-rajac-cadastral-parcels.geojson",
   "indices": [
     "NDVI",
@@ -47,6 +47,65 @@
         "parcel_count_written": 2299,
         "resolution_m": 20,
         "path": "stats/2015/RECI_monthly.json"
+      }
+    },
+    "2016": {
+      "NDVI": {
+        "months_present": [
+          "2016-01",
+          "2016-02",
+          "2016-03",
+          "2016-04",
+          "2016-05",
+          "2016-06",
+          "2016-07",
+          "2016-08",
+          "2016-09",
+          "2016-10",
+          "2016-11",
+          "2016-12"
+        ],
+        "parcel_count_written": 2299,
+        "resolution_m": 10,
+        "path": "stats/2016/NDVI_monthly.json"
+      },
+      "NDMI": {
+        "months_present": [
+          "2016-01",
+          "2016-02",
+          "2016-03",
+          "2016-04",
+          "2016-05",
+          "2016-06",
+          "2016-07",
+          "2016-08",
+          "2016-09",
+          "2016-10",
+          "2016-11",
+          "2016-12"
+        ],
+        "parcel_count_written": 2299,
+        "resolution_m": 20,
+        "path": "stats/2016/NDMI_monthly.json"
+      },
+      "RECI": {
+        "months_present": [
+          "2016-01",
+          "2016-02",
+          "2016-03",
+          "2016-04",
+          "2016-05",
+          "2016-06",
+          "2016-07",
+          "2016-08",
+          "2016-09",
+          "2016-10",
+          "2016-11",
+          "2016-12"
+        ],
+        "parcel_count_written": 2299,
+        "resolution_m": 20,
+        "path": "stats/2016/RECI_monthly.json"
       }
     },
     "2026": {
