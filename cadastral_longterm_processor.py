@@ -174,12 +174,19 @@ def month_bounds(year: int, month: int) -> Tuple[date, date]:
     return start, end
 
 
+REFLECTANCE_BANDS = ["B4", "B5", "B8", "B8A", "B11"]
+
+
 def mask_sr(img: ee.Image) -> ee.Image:
+    # Older S2_SR_HARMONIZED scenes do not all expose ancillary bands in the
+    # same order/type. Selecting only the five reflectance bands we actually
+    # use and casting them to Float makes the monthly ImageCollection
+    # homogeneous before median().
     scl = img.select("SCL")
     mask = ee.Image.constant(1)
     for cls in SCL_BAD:
         mask = mask.And(scl.neq(cls))
-    return img.updateMask(mask)
+    return img.select(REFLECTANCE_BANDS).updateMask(mask).toFloat()
 
 
 def mask_l1c(img: ee.Image) -> ee.Image:
@@ -187,7 +194,7 @@ def mask_l1c(img: ee.Image) -> ee.Image:
     cloud = 1 << 10
     cirrus = 1 << 11
     mask = qa.bitwiseAnd(cloud).eq(0).And(qa.bitwiseAnd(cirrus).eq(0))
-    return img.updateMask(mask)
+    return img.select(REFLECTANCE_BANDS).updateMask(mask).toFloat()
 
 
 def monthly_source(year: int, month: int, region: ee.Geometry) -> Tuple[Optional[ee.Image], Dict[str, Any]]:
@@ -217,8 +224,7 @@ def monthly_source(year: int, month: int, region: ee.Geometry) -> Tuple[Optional
 
 
 def reflectance(source: ee.Image) -> ee.Image:
-    bands = ["B4", "B5", "B8", "B8A", "B11"]
-    return source.select(bands).multiply(0.0001).rename(bands)
+    return source.select(REFLECTANCE_BANDS).multiply(0.0001).rename(REFLECTANCE_BANDS)
 
 
 def build_ndvi_stack(source: ee.Image) -> ee.Image:
