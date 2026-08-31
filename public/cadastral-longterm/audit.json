@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-08-31T17:24:01Z",
+  "updated": "2026-08-31T17:30:55Z",
   "years_present": [
     "2015",
     "2016",
@@ -12,9 +12,10 @@
     "2022",
     "2023",
     "2024",
+    "2025",
     "2026"
   ],
-  "index_year_files": 33,
-  "row_sets_total": 75867,
+  "index_year_files": 36,
+  "row_sets_total": 82764,
   "warning": "L1C/TOA (2015-2017-03) and L2A/SR (2017-04+) are not identical processing levels; source is recorded per month."
 }
