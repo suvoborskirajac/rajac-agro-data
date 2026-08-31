@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "updated": "2026-08-31T22:36:56Z",
+  "parcel_count": 2299,
+  "card_path_template": "cards/{parcela_id}.json",
+  "summary": "summary.json",
+  "climate_context": "climate_context.json"
+}
