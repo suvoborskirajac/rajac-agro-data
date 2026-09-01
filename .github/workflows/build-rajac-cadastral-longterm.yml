@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       year:
-        description: 'Godina za obradu (2015-2026)'
+        description: 'Godina za obradu (2016-2026)'
         default: '2026'
         required: true
       month:
@@ -32,36 +32,35 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 360
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: Validate existing cadastral input
+      - name: Validate existing cadastral input and active year
+        env:
+          YEAR: ${{ github.event.inputs.year || '2026' }}
         run: |
           python - <<'PY'
-          import json
+          import json, os
+          y=int(os.environ['YEAR'])
+          assert 2016 <= y <= 2026, 'Active long-term year must be 2016..2026'
           p='public/boundaries/pio-rajac-cadastral-parcels.geojson'
           g=json.load(open(p,encoding='utf-8'))
           f=g.get('features',[])
           ids=[str(x.get('properties',{}).get('parcela_id','')) for x in f]
           assert len(f)==2299, f'Expected 2299 parcels, got {len(f)}'
           assert len(set(ids))==2299 and all(ids), 'parcela_id missing/not unique'
-          print('Input OK:',len(f),'parcels')
+          print('Input OK:',len(f),'parcels; year=',y)
           PY
-
       - name: Run monthly long-term processor
         env:
           GEE_PROJECT: deft-epigram-414409
@@ -74,24 +73,17 @@ jobs:
           set -e
           ARGS="--year $YEAR --month $MONTH --batch-size $BATCH_SIZE"
           if [ "$FORCE_FLAG" = "true" ]; then ARGS="$ARGS --force"; fi
-          echo "python cadastral_longterm_processor.py $ARGS"
           python cadastral_longterm_processor.py $ARGS
-
       - name: Show audit
         if: always()
         run: |
           if [ -f public/cadastral-longterm/audit.json ]; then cat public/cadastral-longterm/audit.json; fi
-          du -sh public/cadastral-longterm 2>/dev/null || true
-
       - name: Commit long-term results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/cadastral-longterm || true
-          if git diff --staged --quiet; then
-            echo "No long-term changes to commit."
-            exit 0
-          fi
+          if git diff --staged --quiet; then exit 0; fi
           git commit -m "Cadastral long-term ${YEAR}-${MONTH} ($(date -u +%Y-%m-%d))"
           git pull --rebase origin main
           git push origin HEAD:main

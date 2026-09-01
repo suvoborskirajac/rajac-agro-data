@@ -5,7 +5,7 @@ on:
     inputs:
       start_year:
         description: 'Pocetna godina'
-        default: '2015'
+        default: '2016'
         required: true
       end_year:
         description: 'Zavrsna godina'
@@ -66,7 +66,7 @@ jobs:
         env:
           GEE_PROJECT: deft-epigram-414409
           GEE_SERVICE_ACCOUNT_JSON: ${{ secrets.GEE_SERVICE_ACCOUNT_JSON }}
-          START_YEAR: ${{ github.event.inputs.start_year || '2015' }}
+          START_YEAR: ${{ github.event.inputs.start_year || '2016' }}
           END_YEAR: ${{ github.event.inputs.end_year || '2026' }}
           FORCE_FLAG: ${{ github.event.inputs.force || 'false' }}
           BATCH_SIZE: ${{ github.event.inputs.batch_size || '750' }}
@@ -77,8 +77,8 @@ jobs:
             echo "Invalid year input"
             exit 2
           fi
-          if [ "$START_YEAR" -lt 2015 ] || [ "$END_YEAR" -gt 2026 ] || [ "$START_YEAR" -gt "$END_YEAR" ]; then
-            echo "Year range must be 2015..2026"
+          if [ "$START_YEAR" -lt 2016 ] || [ "$END_YEAR" -gt 2026 ] || [ "$START_YEAR" -gt "$END_YEAR" ]; then
+            echo "Year range must be 2016..2026"
             exit 2
           fi
 
