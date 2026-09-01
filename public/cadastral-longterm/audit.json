@@ -1,8 +1,7 @@
 {
   "ok": true,
-  "updated": "2026-08-31T17:35:42Z",
+  "updated": "2026-09-01T11:18:35Z",
   "years_present": [
-    "2015",
     "2016",
     "2017",
     "2018",
@@ -15,7 +14,12 @@
     "2025",
     "2026"
   ],
-  "index_year_files": 36,
-  "row_sets_total": 82764,
-  "warning": "L1C/TOA (2015-2017-03) and L2A/SR (2017-04+) are not identical processing levels; source is recorded per month."
+  "index_year_files": 33,
+  "row_sets_total": 75867,
+  "active_period": "2016-2026",
+  "excluded_years": [
+    "2015"
+  ],
+  "archive_metadata": "archive_2015_partial.json",
+  "warning": "2016-2017-03 L1C/TOA; 2017-04+ L2A/SR. Primary statistical trend remains 2018-2025 L2A-only."
 }

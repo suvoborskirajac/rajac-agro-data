@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "archived_at": "2026-09-01T11:18:30Z",
+  "status": "2015 removed from active analytics; recoverable from Git history",
+  "reason": "2015 Sentinel-2 coverage is partial",
+  "source_commit_before_removal": "86e4b7b669abd173d539193f9a4bcc8fc1111d70",
+  "original_files": [
+    {
+      "path": "public/cadastral-longterm/stats/2015/NDMI_monthly.json",
+      "index": "NDMI",
+      "months_present": [
+        "2015-07",
+        "2015-08",
+        "2015-09",
+        "2015-10",
+        "2015-11",
+        "2015-12"
+      ],
+      "parcel_count_written": 2299,
+      "size_bytes": 5444030
+    },
+    {
+      "path": "public/cadastral-longterm/stats/2015/NDVI_monthly.json",
+      "index": "NDVI",
+      "months_present": [
+        "2015-07",
+        "2015-08",
+        "2015-09",
+        "2015-10",
+        "2015-11",
+        "2015-12"
+      ],
+      "parcel_count_written": 2299,
+      "size_bytes": 5474060
+    },
+    {
+      "path": "public/cadastral-longterm/stats/2015/RECI_monthly.json",
+      "index": "RECI",
+      "months_present": [
+        "2015-07",
+        "2015-08",
+        "2015-09",
+        "2015-10",
+        "2015-11",
+        "2015-12"
+      ],
+      "parcel_count_written": 2299,
+      "size_bytes": 5445933
+    }
+  ],
+  "active_period_after_removal": "2016-2026"
+}

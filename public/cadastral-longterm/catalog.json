@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-08-31T17:35:42Z",
+  "updated": "2026-09-01T11:18:35Z",
   "parcel_source": "public/boundaries/pio-rajac-cadastral-parcels.geojson",
   "indices": [
     "NDVI",
@@ -8,47 +8,6 @@
     "RECI"
   ],
   "years": {
-    "2015": {
-      "NDVI": {
-        "months_present": [
-          "2015-07",
-          "2015-08",
-          "2015-09",
-          "2015-10",
-          "2015-11",
-          "2015-12"
-        ],
-        "parcel_count_written": 2299,
-        "resolution_m": 10,
-        "path": "stats/2015/NDVI_monthly.json"
-      },
-      "NDMI": {
-        "months_present": [
-          "2015-07",
-          "2015-08",
-          "2015-09",
-          "2015-10",
-          "2015-11",
-          "2015-12"
-        ],
-        "parcel_count_written": 2299,
-        "resolution_m": 20,
-        "path": "stats/2015/NDMI_monthly.json"
-      },
-      "RECI": {
-        "months_present": [
-          "2015-07",
-          "2015-08",
-          "2015-09",
-          "2015-10",
-          "2015-11",
-          "2015-12"
-        ],
-        "parcel_count_written": 2299,
-        "resolution_m": 20,
-        "path": "stats/2015/RECI_monthly.json"
-      }
-    },
     "2016": {
       "NDVI": {
         "months_present": [
@@ -688,7 +647,11 @@
     }
   },
   "source_policy": {
-    "2015-06_to_2017-03": "COPERNICUS/S2_HARMONIZED",
+    "2016-01_to_2017-03": "COPERNICUS/S2_HARMONIZED",
     "2017-04_onward": "COPERNICUS/S2_SR_HARMONIZED"
+  },
+  "active_period": "2016-2026",
+  "excluded_years": {
+    "2015": "partial Sentinel-2 year; backed up in Git history"
   }
 }
