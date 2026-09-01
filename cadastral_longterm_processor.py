@@ -21,10 +21,10 @@ Formulas deliberately match piorajac.rs/kopindeksi/parcel_stats_builder.php:
   RECI = (B8A / B5) - 1                          at 20 m
 
 Data source:
-  - 2015-06 through 2017-03: COPERNICUS/S2_HARMONIZED (L1C, QA60 mask)
+  - 2016-01 through 2017-03: COPERNICUS/S2_HARMONIZED (L1C, QA60 mask)
   - 2017-04 onward: COPERNICUS/S2_SR_HARMONIZED (L2A, SCL mask)
 
-The 2015/2016 values are therefore TOA/L1C and are explicitly marked as such;
+The 2016 values are therefore TOA/L1C and are explicitly marked as such;
 2017+ uses surface reflectance where available. No value is fabricated for a
 month with zero Sentinel-2 scenes.
 """
@@ -388,7 +388,7 @@ def save_bundle(year: int, index: str, rows: Dict[str, Dict[str, Any]], month_me
         "parcel_count_total": len(out_rows),
         "parcel_count_written": len(out_rows),
         "source": "Google Earth Engine · Sentinel-2 monthly median composite",
-        "method_note": "2015-06..2017-03 L1C/TOA+QA60; 2017-04+ L2A/SR+SCL. Formula matches piorajac.rs parcel_stats_builder.php.",
+        "method_note": "2016-01..2017-03 L1C/TOA+QA60; 2017-04+ L2A/SR+SCL. Partial 2015 is excluded from active analytics. Formula matches piorajac.rs parcel_stats_builder.php.",
         "month_sources": month_meta,
         "rows": out_rows,
     }
@@ -424,7 +424,7 @@ def update_catalog_and_audit() -> None:
         "indices": list(INDEX_META),
         "years": years,
         "source_policy": {
-            "2015-06_to_2017-03": L1C_COLLECTION,
+            "2016-01_to_2017-03": L1C_COLLECTION,
             "2017-04_onward": SR_COLLECTION,
         },
     }
@@ -481,7 +481,7 @@ def process_month(year: int, month: int, parcels: Sequence[Dict[str, Any]], regi
 
 def parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--year", type=int, required=True, help="2015..current year")
+    ap.add_argument("--year", type=int, required=True, help="2016..current year")
     ap.add_argument("--month", type=int, default=0, help="1..12; 0 = all months in year")
     ap.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE)
     ap.add_argument("--force", action="store_true", help="recompute month even if already present")
@@ -491,8 +491,8 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     current_year = date.today().year
-    if args.year < 2015 or args.year > current_year:
-        raise SystemExit(f"year must be 2015..{current_year}")
+    if args.year < 2016 or args.year > current_year:
+        raise SystemExit(f"year must be 2016..{current_year}")
     if args.month < 0 or args.month > 12:
         raise SystemExit("month must be 0..12")
     if not PARCELS_PATH.is_file():
