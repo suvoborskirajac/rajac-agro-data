@@ -6,36 +6,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.37,
-      "acquisition": "2026-08-28",
-      "type": "drought_stress",
-      "label": "Сушни стрес",
-      "level": "warning",
-      "color": "#f6c95f",
-      "icon": "💧",
-      "evidence": [
-        {
-          "index": "ndmi",
-          "current": 0.0932,
-          "baseline": 0.1879,
-          "delta": -0.0947,
-          "threshold": "drop>=0.08 over 7d"
-        },
-        {
-          "index": "ndre",
-          "current": 0.3169,
-          "baseline": 0.4233,
-          "delta": -0.1064,
-          "threshold": "drop>=0.05 over 7d"
-        }
-      ],
-      "logic": "OR"
-    },
-    {
-      "parcel_id": "P03",
-      "parcel_name": "Кромпир",
-      "culture": "Кромпир",
-      "area_ha": 0.37,
-      "acquisition": "2026-08-28",
+      "acquisition": "2026-08-31",
       "type": "vitality_drop",
       "label": "Пад виталности",
       "level": "warning",
@@ -44,21 +15,72 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.4885,
-          "baseline": 0.6225,
-          "delta": -0.134,
+          "current": 0.4928,
+          "baseline": 0.584,
+          "delta": -0.0912,
           "threshold": "drop>=0.08 over 7d"
         }
       ],
       "logic": "AND"
+    },
+    {
+      "parcel_id": "P04",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.57,
+      "acquisition": "2026-08-31",
+      "type": "vitality_drop",
+      "label": "Пад виталности",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "🌿",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.3126,
+          "baseline": 0.3996,
+          "delta": -0.087,
+          "threshold": "drop>=0.08 over 7d"
+        }
+      ],
+      "logic": "AND"
+    },
+    {
+      "parcel_id": "P06",
+      "parcel_name": "Пашњак",
+      "culture": "Пашњак",
+      "area_ha": 0.31,
+      "acquisition": "2026-08-31",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": -0.0831,
+          "baseline": 0.0157,
+          "delta": -0.0988,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.2897,
+          "baseline": 0.3038,
+          "delta": -0.0141,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR"
     }
   ],
-  "count": 2,
+  "count": 3,
   "by_level": {
     "critical": 0,
-    "warning": 2,
+    "warning": 3,
     "info": 0
   },
-  "latest_acquisition": "2026-08-28",
-  "generated_at": "2026-08-31T11:31:16Z"
+  "latest_acquisition": "2026-08-31",
+  "generated_at": "2026-09-01T09:54:38Z"
 }
