@@ -1,12 +1,98 @@
 {
   "ok": true,
-  "active": [],
-  "count": 0,
+  "active": [
+    {
+      "parcel_id": "P02",
+      "parcel_name": "Пашњак",
+      "culture": "Пашњак",
+      "area_ha": 0.23,
+      "acquisition": "2026-09-05",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": -0.1922,
+          "baseline": -0.1047,
+          "delta": -0.0875,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.2091,
+          "baseline": 0.2369,
+          "delta": -0.0278,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
+      "parcel_id": "P02",
+      "parcel_name": "Пашњак",
+      "culture": "Пашњак",
+      "area_ha": 0.23,
+      "acquisition": "2026-09-05",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": 0.2193,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": 0.2193,
+          "baseline": 0.1472,
+          "delta": 0.0721,
+          "threshold": "gain>=0.15 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
+      "parcel_id": "P03",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.37,
+      "acquisition": "2026-09-05",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": 0.0269,
+          "baseline": 0.0932,
+          "delta": -0.0663,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.2637,
+          "baseline": 0.3169,
+          "delta": -0.0532,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR"
+    }
+  ],
+  "count": 3,
   "by_level": {
     "critical": 0,
-    "warning": 0,
+    "warning": 3,
     "info": 0
   },
-  "latest_acquisition": "2026-09-02",
-  "generated_at": "2026-09-05T08:56:10Z"
+  "latest_acquisition": "2026-09-05",
+  "generated_at": "2026-09-06T09:17:11Z"
 }
