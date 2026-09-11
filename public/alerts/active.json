@@ -1,12 +1,40 @@
 {
   "ok": true,
-  "active": [],
-  "count": 0,
+  "active": [
+    {
+      "parcel_id": "P02",
+      "parcel_name": "Пашњак",
+      "culture": "Пашњак",
+      "area_ha": 0.23,
+      "acquisition": "2026-09-10",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": 0.2079,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": 0.2079,
+          "baseline": 0.1632,
+          "delta": 0.0447,
+          "threshold": "gain>=0.15 over 7d"
+        }
+      ],
+      "logic": "OR"
+    }
+  ],
+  "count": 1,
   "by_level": {
     "critical": 0,
-    "warning": 0,
+    "warning": 1,
     "info": 0
   },
-  "latest_acquisition": "2026-09-07",
-  "generated_at": "2026-09-10T09:33:23Z"
+  "latest_acquisition": "2026-09-10",
+  "generated_at": "2026-09-11T09:30:06Z"
 }
