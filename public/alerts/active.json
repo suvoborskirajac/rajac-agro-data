@@ -6,7 +6,7 @@
       "parcel_name": "Пшеница",
       "culture": "Пшеница",
       "area_ha": 0.54,
-      "acquisition": "2026-09-17",
+      "acquisition": "2026-09-20",
       "type": "recovery",
       "label": "Опоравак",
       "level": "info",
@@ -15,9 +15,9 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.3985,
+          "current": 0.4019,
           "baseline": 0.3402,
-          "delta": 0.0583,
+          "delta": 0.0617,
           "threshold": "gain>=0.05 over 7d"
         }
       ],
@@ -28,7 +28,7 @@
       "parcel_name": "Пашњак",
       "culture": "Пашњак",
       "area_ha": 0.23,
-      "acquisition": "2026-09-17",
+      "acquisition": "2026-09-20",
       "type": "recovery",
       "label": "Опоравак",
       "level": "info",
@@ -37,9 +37,9 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.3825,
+          "current": 0.3891,
           "baseline": 0.3037,
-          "delta": 0.0788,
+          "delta": 0.0854,
           "threshold": "gain>=0.05 over 7d"
         }
       ],
@@ -50,7 +50,7 @@
       "parcel_name": "Пашњак",
       "culture": "Пашњак",
       "area_ha": 0.31,
-      "acquisition": "2026-09-17",
+      "acquisition": "2026-09-20",
       "type": "recovery",
       "label": "Опоравак",
       "level": "info",
@@ -59,9 +59,9 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.433,
+          "current": 0.4462,
           "baseline": 0.339,
-          "delta": 0.094,
+          "delta": 0.1072,
           "threshold": "gain>=0.05 over 7d"
         }
       ],
@@ -74,6 +74,6 @@
     "warning": 0,
     "info": 3
   },
-  "latest_acquisition": "2026-09-17",
-  "generated_at": "2026-09-20T09:42:52Z"
+  "latest_acquisition": "2026-09-20",
+  "generated_at": "2026-09-21T10:36:09Z"
 }
