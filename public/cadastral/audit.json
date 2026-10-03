@@ -1,13 +1,13 @@
 {
   "ok": true,
   "parcel_count": 2299,
-  "records_total": 147136,
-  "records_per_parcel_min": 64,
-  "records_per_parcel_max": 64,
-  "records_per_parcel_avg": 64.0,
-  "acquisition_count": 64,
-  "latest": "2026-09-30",
-  "coverage_avg_pct": 93.6,
+  "records_total": 149435,
+  "records_per_parcel_min": 65,
+  "records_per_parcel_max": 65,
+  "records_per_parcel_avg": 65.0,
+  "acquisition_count": 65,
+  "latest": "2026-10-02",
+  "coverage_avg_pct": 93.7,
   "numeric_values_reconstructed_from_png": false,
-  "generated_at": "2026-10-02T11:20:20Z"
+  "generated_at": "2026-10-03T10:36:21Z"
 }
