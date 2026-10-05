@@ -1,5 +1,269 @@
 {
   "ok": true,
-  "new_alerts": [],
-  "generated_at": "2026-10-04T11:03:29.211169+00:00"
+  "new_alerts": [
+    {
+      "parcel_id": "P01",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.54,
+      "acquisition": "2026-10-04",
+      "type": "vitality_drop",
+      "label": "Пад виталности",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "🌿",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.2862,
+          "baseline": 0.3728,
+          "delta": -0.0866,
+          "threshold": "drop>=0.08 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-10-05T12:11:23.888154+00:00"
+    },
+    {
+      "parcel_id": "P02",
+      "parcel_name": "Пашњак",
+      "culture": "Пашњак",
+      "area_ha": 0.23,
+      "acquisition": "2026-10-04",
+      "type": "recovery",
+      "label": "Опоравак",
+      "level": "info",
+      "color": "#7cc26b",
+      "icon": "🌱",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.4771,
+          "baseline": 0.4225,
+          "delta": 0.0546,
+          "threshold": "gain>=0.05 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-10-05T12:11:23.888236+00:00"
+    },
+    {
+      "parcel_id": "P03",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.37,
+      "acquisition": "2026-10-04",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": -0.1207,
+          "baseline": 0.0176,
+          "delta": -0.1383,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.115,
+          "baseline": 0.2546,
+          "delta": -0.1396,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR",
+      "first_seen_at": "2026-10-05T12:11:23.888286+00:00"
+    },
+    {
+      "parcel_id": "P03",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.37,
+      "acquisition": "2026-10-04",
+      "type": "vitality_drop",
+      "label": "Пад виталности",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "🌿",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.1823,
+          "baseline": 0.412,
+          "delta": -0.2297,
+          "threshold": "drop>=0.08 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-10-05T12:11:23.888331+00:00"
+    },
+    {
+      "parcel_id": "P03",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.37,
+      "acquisition": "2026-10-04",
+      "type": "crisis_stress",
+      "label": "Кризни стрес",
+      "level": "critical",
+      "color": "#ee6a55",
+      "icon": "🔥",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.1823,
+          "baseline": 0.412,
+          "delta": -0.2297,
+          "threshold": "drop>=0.15 over 7d"
+        },
+        {
+          "index": "ndmi",
+          "current": -0.1207,
+          "baseline": 0.0176,
+          "delta": -0.1383,
+          "threshold": "drop>=0.1 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-10-05T12:11:23.888371+00:00"
+    },
+    {
+      "parcel_id": "P03",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.37,
+      "acquisition": "2026-10-04",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": 0.1893,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": 0.1893,
+          "baseline": 0.0147,
+          "delta": 0.1746,
+          "threshold": "gain>=0.15 over 7d"
+        }
+      ],
+      "logic": "OR",
+      "first_seen_at": "2026-10-05T12:11:23.888438+00:00"
+    },
+    {
+      "parcel_id": "P04",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.57,
+      "acquisition": "2026-10-04",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": -0.1314,
+          "baseline": -0.0031,
+          "delta": -0.1283,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.1401,
+          "baseline": 0.2338,
+          "delta": -0.0937,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR",
+      "first_seen_at": "2026-10-05T12:11:23.888479+00:00"
+    },
+    {
+      "parcel_id": "P04",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.57,
+      "acquisition": "2026-10-04",
+      "type": "vitality_drop",
+      "label": "Пад виталности",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "🌿",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.2019,
+          "baseline": 0.3724,
+          "delta": -0.1705,
+          "threshold": "drop>=0.08 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-10-05T12:11:23.888516+00:00"
+    },
+    {
+      "parcel_id": "P04",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.57,
+      "acquisition": "2026-10-04",
+      "type": "crisis_stress",
+      "label": "Кризни стрес",
+      "level": "critical",
+      "color": "#ee6a55",
+      "icon": "🔥",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.2019,
+          "baseline": 0.3724,
+          "delta": -0.1705,
+          "threshold": "drop>=0.15 over 7d"
+        },
+        {
+          "index": "ndmi",
+          "current": -0.1314,
+          "baseline": -0.0031,
+          "delta": -0.1283,
+          "threshold": "drop>=0.1 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-10-05T12:11:23.888551+00:00"
+    },
+    {
+      "parcel_id": "P07",
+      "parcel_name": "Ливада",
+      "culture": "Ливада",
+      "area_ha": 0.51,
+      "acquisition": "2026-10-04",
+      "type": "recovery",
+      "label": "Опоравак",
+      "level": "info",
+      "color": "#7cc26b",
+      "icon": "🌱",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.4466,
+          "baseline": 0.377,
+          "delta": 0.0696,
+          "threshold": "gain>=0.05 over 7d"
+        }
+      ],
+      "logic": "AND",
+      "first_seen_at": "2026-10-05T12:11:23.888587+00:00"
+    }
+  ],
+  "generated_at": "2026-10-05T12:11:23.961888+00:00"
 }
