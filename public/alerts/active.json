@@ -6,7 +6,36 @@
       "parcel_name": "Пшеница",
       "culture": "Пшеница",
       "area_ha": 0.54,
-      "acquisition": "2026-10-04",
+      "acquisition": "2026-10-05",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": -0.1531,
+          "baseline": -0.0663,
+          "delta": -0.0868,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.1916,
+          "baseline": 0.203,
+          "delta": -0.0114,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
+      "parcel_id": "P01",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.54,
+      "acquisition": "2026-10-05",
       "type": "vitality_drop",
       "label": "Пад виталности",
       "level": "warning",
@@ -15,20 +44,47 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.2862,
+          "current": 0.2925,
           "baseline": 0.3728,
-          "delta": -0.0866,
+          "delta": -0.0803,
           "threshold": "drop>=0.08 over 7d"
         }
       ],
       "logic": "AND"
     },
     {
+      "parcel_id": "P01",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.54,
+      "acquisition": "2026-10-05",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": 0.2019,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": 0.2019,
+          "baseline": 0.1146,
+          "delta": 0.0873,
+          "threshold": "gain>=0.15 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
       "parcel_id": "P02",
       "parcel_name": "Пашњак",
       "culture": "Пашњак",
       "area_ha": 0.23,
-      "acquisition": "2026-10-04",
+      "acquisition": "2026-10-05",
       "type": "recovery",
       "label": "Опоравак",
       "level": "info",
@@ -37,9 +93,9 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.4771,
+          "current": 0.4825,
           "baseline": 0.4225,
-          "delta": 0.0546,
+          "delta": 0.06,
           "threshold": "gain>=0.05 over 7d"
         }
       ],
@@ -50,7 +106,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.37,
-      "acquisition": "2026-10-04",
+      "acquisition": "2026-10-05",
       "type": "drought_stress",
       "label": "Сушни стрес",
       "level": "warning",
@@ -59,16 +115,16 @@
       "evidence": [
         {
           "index": "ndmi",
-          "current": -0.1207,
+          "current": -0.137,
           "baseline": 0.0176,
-          "delta": -0.1383,
+          "delta": -0.1546,
           "threshold": "drop>=0.08 over 7d"
         },
         {
           "index": "ndre",
-          "current": 0.115,
+          "current": 0.1238,
           "baseline": 0.2546,
-          "delta": -0.1396,
+          "delta": -0.1308,
           "threshold": "drop>=0.05 over 7d"
         }
       ],
@@ -79,7 +135,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.37,
-      "acquisition": "2026-10-04",
+      "acquisition": "2026-10-05",
       "type": "vitality_drop",
       "label": "Пад виталности",
       "level": "warning",
@@ -88,9 +144,9 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.1823,
+          "current": 0.1847,
           "baseline": 0.412,
-          "delta": -0.2297,
+          "delta": -0.2273,
           "threshold": "drop>=0.08 over 7d"
         }
       ],
@@ -101,7 +157,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.37,
-      "acquisition": "2026-10-04",
+      "acquisition": "2026-10-05",
       "type": "crisis_stress",
       "label": "Кризни стрес",
       "level": "critical",
@@ -110,16 +166,16 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.1823,
+          "current": 0.1847,
           "baseline": 0.412,
-          "delta": -0.2297,
+          "delta": -0.2273,
           "threshold": "drop>=0.15 over 7d"
         },
         {
           "index": "ndmi",
-          "current": -0.1207,
+          "current": -0.137,
           "baseline": 0.0176,
-          "delta": -0.1383,
+          "delta": -0.1546,
           "threshold": "drop>=0.1 over 7d"
         }
       ],
@@ -130,7 +186,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.37,
-      "acquisition": "2026-10-04",
+      "acquisition": "2026-10-05",
       "type": "bare_soil",
       "label": "Голо тло / могућа ерозија",
       "level": "warning",
@@ -139,14 +195,14 @@
       "evidence": [
         {
           "index": "bsi",
-          "current": 0.1893,
+          "current": 0.2009,
           "threshold": ">=0.2"
         },
         {
           "index": "bsi",
-          "current": 0.1893,
+          "current": 0.2009,
           "baseline": 0.0147,
-          "delta": 0.1746,
+          "delta": 0.1862,
           "threshold": "gain>=0.15 over 7d"
         }
       ],
@@ -157,7 +213,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.57,
-      "acquisition": "2026-10-04",
+      "acquisition": "2026-10-05",
       "type": "drought_stress",
       "label": "Сушни стрес",
       "level": "warning",
@@ -166,16 +222,16 @@
       "evidence": [
         {
           "index": "ndmi",
-          "current": -0.1314,
+          "current": -0.1346,
           "baseline": -0.0031,
-          "delta": -0.1283,
+          "delta": -0.1315,
           "threshold": "drop>=0.08 over 7d"
         },
         {
           "index": "ndre",
-          "current": 0.1401,
+          "current": 0.1487,
           "baseline": 0.2338,
-          "delta": -0.0937,
+          "delta": -0.0851,
           "threshold": "drop>=0.05 over 7d"
         }
       ],
@@ -186,7 +242,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.57,
-      "acquisition": "2026-10-04",
+      "acquisition": "2026-10-05",
       "type": "vitality_drop",
       "label": "Пад виталности",
       "level": "warning",
@@ -195,9 +251,9 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.2019,
+          "current": 0.2144,
           "baseline": 0.3724,
-          "delta": -0.1705,
+          "delta": -0.158,
           "threshold": "drop>=0.08 over 7d"
         }
       ],
@@ -208,7 +264,7 @@
       "parcel_name": "Кромпир",
       "culture": "Кромпир",
       "area_ha": 0.57,
-      "acquisition": "2026-10-04",
+      "acquisition": "2026-10-05",
       "type": "crisis_stress",
       "label": "Кризни стрес",
       "level": "critical",
@@ -217,50 +273,28 @@
       "evidence": [
         {
           "index": "ndvi",
-          "current": 0.2019,
+          "current": 0.2144,
           "baseline": 0.3724,
-          "delta": -0.1705,
+          "delta": -0.158,
           "threshold": "drop>=0.15 over 7d"
         },
         {
           "index": "ndmi",
-          "current": -0.1314,
+          "current": -0.1346,
           "baseline": -0.0031,
-          "delta": -0.1283,
+          "delta": -0.1315,
           "threshold": "drop>=0.1 over 7d"
-        }
-      ],
-      "logic": "AND"
-    },
-    {
-      "parcel_id": "P07",
-      "parcel_name": "Ливада",
-      "culture": "Ливада",
-      "area_ha": 0.51,
-      "acquisition": "2026-10-04",
-      "type": "recovery",
-      "label": "Опоравак",
-      "level": "info",
-      "color": "#7cc26b",
-      "icon": "🌱",
-      "evidence": [
-        {
-          "index": "ndvi",
-          "current": 0.4466,
-          "baseline": 0.377,
-          "delta": 0.0696,
-          "threshold": "gain>=0.05 over 7d"
         }
       ],
       "logic": "AND"
     }
   ],
-  "count": 10,
+  "count": 11,
   "by_level": {
     "critical": 2,
-    "warning": 6,
-    "info": 2
+    "warning": 8,
+    "info": 1
   },
-  "latest_acquisition": "2026-10-04",
-  "generated_at": "2026-10-05T12:11:23Z"
+  "latest_acquisition": "2026-10-05",
+  "generated_at": "2026-10-06T11:55:29Z"
 }
