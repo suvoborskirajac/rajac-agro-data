@@ -1,12 +1,91 @@
 {
   "ok": true,
-  "active": [],
-  "count": 0,
+  "active": [
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-10-14",
+      "type": "drought_stress",
+      "label": "Сушни стрес",
+      "level": "warning",
+      "color": "#f6c95f",
+      "icon": "💧",
+      "evidence": [
+        {
+          "index": "ndmi",
+          "current": -0.1917,
+          "baseline": -0.0785,
+          "delta": -0.1132,
+          "threshold": "drop>=0.08 over 7d"
+        },
+        {
+          "index": "ndre",
+          "current": 0.1428,
+          "baseline": 0.1786,
+          "delta": -0.0358,
+          "threshold": "drop>=0.05 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-10-14",
+      "type": "fire_or_harvest",
+      "label": "Могући пожар или нагла жетва",
+      "level": "critical",
+      "color": "#ee6a55",
+      "icon": "🚒",
+      "evidence": [
+        {
+          "index": "nbr",
+          "current": -0.0953,
+          "baseline": 0.245,
+          "delta": -0.3403,
+          "threshold": "drop>=0.2 over 5d"
+        }
+      ],
+      "logic": "AND"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-10-14",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": 0.2228,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": 0.2228,
+          "baseline": 0.1399,
+          "delta": 0.0829,
+          "threshold": "gain>=0.15 over 7d"
+        }
+      ],
+      "logic": "OR"
+    }
+  ],
+  "count": 3,
   "by_level": {
-    "critical": 0,
-    "warning": 0,
+    "critical": 1,
+    "warning": 2,
     "info": 0
   },
-  "latest_acquisition": "2026-10-10",
-  "generated_at": "2026-10-14T10:02:00Z"
+  "latest_acquisition": "2026-10-14",
+  "generated_at": "2026-10-15T09:44:19Z"
 }
