@@ -2,62 +2,11 @@
   "ok": true,
   "active": [
     {
-      "parcel_id": "P05",
+      "parcel_id": "P01",
       "parcel_name": "Пшеница",
       "culture": "Пшеница",
-      "area_ha": 0.73,
-      "acquisition": "2026-10-14",
-      "type": "drought_stress",
-      "label": "Сушни стрес",
-      "level": "warning",
-      "color": "#f6c95f",
-      "icon": "💧",
-      "evidence": [
-        {
-          "index": "ndmi",
-          "current": -0.1917,
-          "baseline": -0.0785,
-          "delta": -0.1132,
-          "threshold": "drop>=0.08 over 7d"
-        },
-        {
-          "index": "ndre",
-          "current": 0.1428,
-          "baseline": 0.1786,
-          "delta": -0.0358,
-          "threshold": "drop>=0.05 over 7d"
-        }
-      ],
-      "logic": "OR"
-    },
-    {
-      "parcel_id": "P05",
-      "parcel_name": "Пшеница",
-      "culture": "Пшеница",
-      "area_ha": 0.73,
-      "acquisition": "2026-10-14",
-      "type": "fire_or_harvest",
-      "label": "Могући пожар или нагла жетва",
-      "level": "critical",
-      "color": "#ee6a55",
-      "icon": "🚒",
-      "evidence": [
-        {
-          "index": "nbr",
-          "current": -0.0953,
-          "baseline": 0.245,
-          "delta": -0.3403,
-          "threshold": "drop>=0.2 over 5d"
-        }
-      ],
-      "logic": "AND"
-    },
-    {
-      "parcel_id": "P05",
-      "parcel_name": "Пшеница",
-      "culture": "Пшеница",
-      "area_ha": 0.73,
-      "acquisition": "2026-10-14",
+      "area_ha": 0.54,
+      "acquisition": "2026-10-24",
       "type": "bare_soil",
       "label": "Голо тло / могућа ерозија",
       "level": "warning",
@@ -66,26 +15,102 @@
       "evidence": [
         {
           "index": "bsi",
-          "current": 0.2228,
+          "current": 0.2063,
           "threshold": ">=0.2"
         },
         {
           "index": "bsi",
-          "current": 0.2228,
-          "baseline": 0.1399,
-          "delta": 0.0829,
+          "current": 0.2063,
+          "baseline": 0.147,
+          "delta": 0.0593,
           "threshold": "gain>=0.15 over 7d"
         }
       ],
       "logic": "OR"
+    },
+    {
+      "parcel_id": "P04",
+      "parcel_name": "Кромпир",
+      "culture": "Кромпир",
+      "area_ha": 0.57,
+      "acquisition": "2026-10-24",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": 0.2026,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": 0.2026,
+          "baseline": 0.1739,
+          "delta": 0.0287,
+          "threshold": "gain>=0.15 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
+      "parcel_id": "P05",
+      "parcel_name": "Пшеница",
+      "culture": "Пшеница",
+      "area_ha": 0.73,
+      "acquisition": "2026-10-24",
+      "type": "bare_soil",
+      "label": "Голо тло / могућа ерозија",
+      "level": "warning",
+      "color": "#f6a763",
+      "icon": "🟫",
+      "evidence": [
+        {
+          "index": "bsi",
+          "current": 0.2672,
+          "threshold": ">=0.2"
+        },
+        {
+          "index": "bsi",
+          "current": 0.2672,
+          "baseline": 0.2228,
+          "delta": 0.0444,
+          "threshold": "gain>=0.15 over 7d"
+        }
+      ],
+      "logic": "OR"
+    },
+    {
+      "parcel_id": "P06",
+      "parcel_name": "Пашњак",
+      "culture": "Пашњак",
+      "area_ha": 0.31,
+      "acquisition": "2026-10-24",
+      "type": "recovery",
+      "label": "Опоравак",
+      "level": "info",
+      "color": "#7cc26b",
+      "icon": "🌱",
+      "evidence": [
+        {
+          "index": "ndvi",
+          "current": 0.6378,
+          "baseline": 0.5075,
+          "delta": 0.1303,
+          "threshold": "gain>=0.05 over 7d"
+        }
+      ],
+      "logic": "AND"
     }
   ],
-  "count": 3,
+  "count": 4,
   "by_level": {
-    "critical": 1,
-    "warning": 2,
-    "info": 0
+    "critical": 0,
+    "warning": 3,
+    "info": 1
   },
-  "latest_acquisition": "2026-10-14",
-  "generated_at": "2026-10-24T09:24:06Z"
+  "latest_acquisition": "2026-10-24",
+  "generated_at": "2026-10-25T09:42:49Z"
 }
