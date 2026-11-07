@@ -1,116 +1,12 @@
 {
   "ok": true,
-  "active": [
-    {
-      "parcel_id": "P01",
-      "parcel_name": "Пшеница",
-      "culture": "Пшеница",
-      "area_ha": 0.54,
-      "acquisition": "2026-10-24",
-      "type": "bare_soil",
-      "label": "Голо тло / могућа ерозија",
-      "level": "warning",
-      "color": "#f6a763",
-      "icon": "🟫",
-      "evidence": [
-        {
-          "index": "bsi",
-          "current": 0.2063,
-          "threshold": ">=0.2"
-        },
-        {
-          "index": "bsi",
-          "current": 0.2063,
-          "baseline": 0.147,
-          "delta": 0.0593,
-          "threshold": "gain>=0.15 over 7d"
-        }
-      ],
-      "logic": "OR"
-    },
-    {
-      "parcel_id": "P04",
-      "parcel_name": "Кромпир",
-      "culture": "Кромпир",
-      "area_ha": 0.57,
-      "acquisition": "2026-10-24",
-      "type": "bare_soil",
-      "label": "Голо тло / могућа ерозија",
-      "level": "warning",
-      "color": "#f6a763",
-      "icon": "🟫",
-      "evidence": [
-        {
-          "index": "bsi",
-          "current": 0.2026,
-          "threshold": ">=0.2"
-        },
-        {
-          "index": "bsi",
-          "current": 0.2026,
-          "baseline": 0.1739,
-          "delta": 0.0287,
-          "threshold": "gain>=0.15 over 7d"
-        }
-      ],
-      "logic": "OR"
-    },
-    {
-      "parcel_id": "P05",
-      "parcel_name": "Пшеница",
-      "culture": "Пшеница",
-      "area_ha": 0.73,
-      "acquisition": "2026-10-24",
-      "type": "bare_soil",
-      "label": "Голо тло / могућа ерозија",
-      "level": "warning",
-      "color": "#f6a763",
-      "icon": "🟫",
-      "evidence": [
-        {
-          "index": "bsi",
-          "current": 0.2672,
-          "threshold": ">=0.2"
-        },
-        {
-          "index": "bsi",
-          "current": 0.2672,
-          "baseline": 0.2228,
-          "delta": 0.0444,
-          "threshold": "gain>=0.15 over 7d"
-        }
-      ],
-      "logic": "OR"
-    },
-    {
-      "parcel_id": "P06",
-      "parcel_name": "Пашњак",
-      "culture": "Пашњак",
-      "area_ha": 0.31,
-      "acquisition": "2026-10-24",
-      "type": "recovery",
-      "label": "Опоравак",
-      "level": "info",
-      "color": "#7cc26b",
-      "icon": "🌱",
-      "evidence": [
-        {
-          "index": "ndvi",
-          "current": 0.6378,
-          "baseline": 0.5075,
-          "delta": 0.1303,
-          "threshold": "gain>=0.05 over 7d"
-        }
-      ],
-      "logic": "AND"
-    }
-  ],
-  "count": 4,
+  "active": [],
+  "count": 0,
   "by_level": {
     "critical": 0,
-    "warning": 3,
-    "info": 1
+    "warning": 0,
+    "info": 0
   },
-  "latest_acquisition": "2026-10-24",
-  "generated_at": "2026-11-06T12:49:37Z"
+  "latest_acquisition": "2026-11-06",
+  "generated_at": "2026-11-07T11:37:51Z"
 }
