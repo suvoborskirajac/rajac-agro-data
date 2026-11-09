@@ -4,6 +4,13 @@
   "latest": "2026-01",
   "periods": [
     {
+      "id": "2026-10",
+      "label": "10/2026",
+      "kind": "monthly",
+      "image_count": 10,
+      "scale_m": 10.0
+    },
+    {
       "id": "2026-09",
       "label": "09/2026",
       "kind": "monthly",
@@ -185,10 +192,10 @@
   "total_area_ha": 3.26,
   "scale_m": 10.0,
   "source": "Copernicus Sentinel-2 SR Harmonized",
-  "updated_at": "2026-10-09T11:37:49Z",
+  "updated_at": "2026-11-09T13:32:32Z",
   "coverage": {
-    "count": 9,
-    "first": "2026-09",
+    "count": 10,
+    "first": "2026-10",
     "last": "2026-01"
   },
   "note": "Месечни Sentinel-2 мониторинг пољопривредних парцела ПИО „Рајац\" на 10 m. Теренска провера + сателитски подаци."
