@@ -48,6 +48,9 @@ OUT_ROOT = ROOT / "public" / "cadastral-statistics"
 CARDS_ROOT = OUT_ROOT / "cards"
 
 INDICES = ("NDVI", "NDMI", "RECI")
+# Месечна RECI вредност: медијана пиксела у овом опсегу (исто правило као parcel_index_method.php на серверу).
+RECI_VALID_RANGE = (-1.0, 15.0)
+VALUE_METHOD = {"NDVI": "mean", "NDMI": "mean", "RECI": "median"}
 YEARS = range(2015, 2027)
 PRIMARY_YEARS = range(2018, 2026)
 SENSITIVITY_YEARS = range(2016, 2026)
@@ -399,8 +402,19 @@ def load_monthly_database() -> Tuple[Dict[str, Dict[str, Dict[str, Dict[str, Any
                     key = str(s.get("month") or "")
                     if not key:
                         continue
+                    raw_mean = safe_float(s.get("mean"))
+                    med = safe_float(s.get("median"))
+                    if idx == "RECI":
+                        # RECI = B8A/B05 - 1: при слабом B05 појединачни пиксели дају огромне
+                        # вредности и кваре аритметичку средину. Месечна вредност је медијана
+                        # пиксела, прихваћена само у опсегу RECI_VALID_RANGE (границе укључене).
+                        lo, hi = RECI_VALID_RANGE
+                        value = med if (med is not None and lo <= med <= hi) else None
+                    else:
+                        value = raw_mean
                     data[idx][pid][key] = {
-                        "mean": safe_float(s.get("mean")),
+                        "mean": value,
+                        "mean_raw": raw_mean,
                         "median": safe_float(s.get("median")),
                         "valid_pct": safe_float(s.get("cloud_free_pct")),
                         "pixels": safe_float(s.get("expected_pixel_count_approx") or s.get("sample_count")),
@@ -588,6 +602,7 @@ def build_card(pid: str, meta: Dict[str, Any], db: Dict[str, Dict[str, Dict[str,
             for season in SEASONS
         }
         card["indices"][idx] = {
+            "monthly_value_method": VALUE_METHOD[idx],
             "annual": annual,
             "seasonal": seasonal,
             "trend": {
@@ -734,6 +749,8 @@ def main() -> None:
         "primary_period": "2018-2025 L2A/SR only",
         "sensitivity_period": "2016-2025",
         "indices": list(INDICES),
+        "monthly_value_method": VALUE_METHOD,
+        "reci_valid_range": list(RECI_VALID_RANGE),
         "seasonal_metrics": list(SEASONS),
         "tests": [
             "Mann-Kendall",

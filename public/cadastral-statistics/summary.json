@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-09-01T11:19:22Z",
+  "updated": "2026-11-20T23:09:34Z",
   "parcel_count": 2299,
   "primary_period": "2018-2025 L2A/SR only",
   "sensitivity_period": "2016-2025",
@@ -8,6 +8,15 @@
     "NDVI",
     "NDMI",
     "RECI"
+  ],
+  "monthly_value_method": {
+    "NDVI": "mean",
+    "NDMI": "mean",
+    "RECI": "median"
+  },
+  "reci_valid_range": [
+    -1.0,
+    15.0
   ],
   "seasonal_metrics": [
     "spring",
@@ -43,10 +52,10 @@
       "без јасног тренда": 1
     },
     "RECI": {
-      "благ раст (није значајан)": 1381,
-      "благ пад (није значајан)": 814,
-      "статистички значајан раст": 86,
-      "статистички значајан пад": 18
+      "благ раст (није значајан)": 1318,
+      "статистички значајан раст": 87,
+      "благ пад (није значајан)": 869,
+      "статистички значајан пад": 25
     }
   },
   "warning": "Drought context is Rajac-wide TerraClimate PDSI, not parcel-level soil moisture. L1C/L2A sensitivity is explicitly separated."
